@@ -5,6 +5,11 @@ from config.db_config import *
 
 engine = create_engine(f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
+logging.basicConfig(
+    filename="logs/pipeline.log",
+    level=logging.INFO
+)
+
 def load_data():
     daily_sales, top_products = transform
     daily_sales.to_sql("daily_sales", engine, if_exists="replace", index=False)

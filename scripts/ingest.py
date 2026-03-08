@@ -1,6 +1,5 @@
 import pandas as pd
 import logging
-import os
 
 logging.basicConfig(
     filename='logs/pipeline.log',

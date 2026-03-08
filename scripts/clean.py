@@ -1,9 +1,13 @@
 import pandas as pd
 from sqlalchemy import true
-
 from ingest import ingest_data
 import json
 import logging
+
+logging.basicConfig(
+    filename="logs/pipeline.log",
+    level=logging.INFO
+)
 
 def rename_columns(df):
     new_cols = ["order_id", "quantity", "product", "unit_price", "order_date", "customer_name", "region",

@@ -1,6 +1,11 @@
 from clean import clean_data
 import logging
 
+logging.basicConfig(
+    filename="logs/pipeline.log",
+    level=logging.INFO
+)
+
 def daily_sales(df):
     return (
         df.groupby('order_date').agg(total_revenue=('order_date', 'sum')).reset_index()
