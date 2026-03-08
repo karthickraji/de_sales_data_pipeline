@@ -1,6 +1,9 @@
 import pandas as pd
+from sqlalchemy import true
+
 from ingest import ingest_data
 import json
+import logging
 
 def rename_columns(df):
     new_cols = ["order_id", "quantity", "product", "unit_price", "order_date", "customer_name", "region",
@@ -9,6 +12,8 @@ def rename_columns(df):
                       "COUNTRY", "SALES"]
     filtered_df = df.filter(items=required_items)
     filtered_df.columns = new_cols
+
+    logging.info("Required columns have been renamed")
     return filtered_df
 
 def track_invalid_records(df):
@@ -38,11 +43,16 @@ def track_invalid_records(df):
     with open(file_path, 'w') as json_file:
         json.dump(tracking_invalid_data, json_file, indent=4)
 
+    logging.info("Invalid records have been tracked!")
+
+    return true()
+
 def remove_invalid_records(df):
     df.drop_duplicates(inplace=True)
     df = df.dropna(subset=["customer_name"])
     df["order_date"] = pd.to_datetime(df["order_date"])
     df = df[df["quantity"] > 0]
+    logging.info("Invalid records have been removed!")
     return df
 
 def clean_data():
@@ -50,6 +60,7 @@ def clean_data():
     modified_df = rename_columns(df)
     track_invalid_records(modified_df)
     cleaned_df = remove_invalid_records(modified_df)
+    logging.info("Data has been cleaned!")
     return cleaned_df
 
 
