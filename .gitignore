@@ -1,1 +1,7 @@
 logs/pipeline.log
+airflow/airflow.*
+airflow/logs/
+airflow/simple_auth_manager_passwords.json.generated
+src/__pycache__/
+config/__pycache__/
+airflow/dags/__pycache__/
