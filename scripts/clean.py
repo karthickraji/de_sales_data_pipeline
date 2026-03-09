@@ -28,7 +28,6 @@ def track_invalid_records(df):
     negative_total_amount_count = df[df['total_amount'] < 0].sum().sum()
 
     tracking_invalid_data = {
-        "file_name": "data/sales_data_sample.csv",
         "row_count": int(row_count),
         "total_null_count": int(total_null_count),
         "null_customer_count": int(null_customer_count),
@@ -39,10 +38,14 @@ def track_invalid_records(df):
         "negative_total_amount_count": int(negative_total_amount_count)
     }
 
+    return tracking_invalid_data
+
+def write_track_invalid_records_into_file(data):
     file_path = 'tracking_invalid_data.json'
+    data.update({"file_name": "data/sales_data_sample.csv"})
 
     with open(file_path, 'w') as json_file:
-        json.dump(tracking_invalid_data, json_file, indent=4)
+        json.dump(data, json_file, indent=4)
 
     logging.info("Invalid records have been tracked!")
     return true()
@@ -58,7 +61,8 @@ def remove_invalid_records(df):
 def clean_data():
     df = ingest.ingest_data()
     modified_df = rename_columns(df)
-    track_invalid_records(modified_df)
+    data = track_invalid_records(modified_df)
+    write_track_invalid_records_into_file(data)
     cleaned_df = remove_invalid_records(modified_df)
     logging.info("Data has been cleaned!")
     return cleaned_df
