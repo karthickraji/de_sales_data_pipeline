@@ -1,28 +1,22 @@
-from clean import clean_data
+from scripts import clean
 import logging
 
-logging.basicConfig(
-    filename="logs/pipeline.log",
-    level=logging.INFO
-)
+logger = logging.getLogger(__name__)
 
 def daily_sales(df):
     return (
-        df.groupby('order_date').agg(total_revenue=('order_date', 'sum')).reset_index()
+        df.groupby('order_date').agg(total_revenue=('unit_price', 'sum')).reset_index()
     )
 
 def top_products(df):
     return (
-        df.groupby('product').agg(total_qty=('quantity', 'sum')).sort_values('total_qty', ascending=False).reset_index()
+        df.groupby('product').agg(total_qty=('quantity', 'sum')).sort_values('total_qty', ascending=False).head(10)
     )
 
-def transform():
-    df = clean_data()
+def transform_data():
+    df = clean.clean_data()
     daily_sales_agg = daily_sales(df)
     top_products_agg = top_products(df)
 
     logging.info("Transformation completed")
     return daily_sales_agg, top_products_agg
-
-if __name__ == "__main__":
-    transform()

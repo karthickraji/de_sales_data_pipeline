@@ -1,0 +1,11 @@
+{
+    "file_name": "data/sales_data_sample.csv",
+    "row_count": 2823,
+    "total_null_count": 0,
+    "null_customer_count": 0,
+    "duplicate_customer_name_count": 2731,
+    "null_order_id_count": 0,
+    "duplicate_order_id_count": 2516,
+    "negative_quantity_count": 0,
+    "negative_total_amount_count": 0
+}
