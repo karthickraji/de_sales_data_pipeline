@@ -1,5 +1,5 @@
 import pandas as pd
-from scripts.clean import remove_invalid_records, track_invalid_records
+from src.clean import remove_invalid_records, track_invalid_records
 
 def test_track_invalid_records():
     data = {

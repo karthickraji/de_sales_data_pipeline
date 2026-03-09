@@ -1,6 +1,6 @@
 import pandas as pd
 from sqlalchemy import true
-from scripts import ingest
+from src import ingest
 import json
 import logging
 

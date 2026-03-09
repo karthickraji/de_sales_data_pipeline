@@ -1,5 +1,5 @@
 import pandas as pd
-from scripts.transform import daily_sales, top_products
+from src.transform import daily_sales, top_products
 
 def test_daily_sales():
     data = {

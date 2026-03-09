@@ -1,4 +1,4 @@
-from scripts import clean
+from src import clean
 import logging
 
 logger = logging.getLogger(__name__)
@@ -10,7 +10,7 @@ def daily_sales(df):
 
 def top_products(df):
     return (
-        df.groupby('product').agg(total_qty=('quantity', 'sum')).sort_values('total_qty', ascending=False).head(10)
+        df.groupby('product').agg(total_qty=('quantity', 'sum')).sort_values('total_qty', ascending=False).head(10).reset_index()
     )
 
 def transform_data():
