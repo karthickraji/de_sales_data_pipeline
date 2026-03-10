@@ -65,3 +65,38 @@ INFO:root:Ingested 2823 rows
 2026-03-09 11:48:56,082 - root - INFO - Data has been cleaned!
 2026-03-09 11:48:56,096 - root - INFO - Transformation completed
 2026-03-09 11:48:56,346 - root - INFO - Data loaded successfully
+2026-03-09 21:14:05,624 - root - INFO - Ingested 2823 rows
+2026-03-09 21:14:05,630 - root - INFO - Required columns have been renamed
+2026-03-09 21:14:05,640 - root - INFO - Invalid records have been tracked!
+2026-03-09 21:14:05,650 - root - INFO - Invalid records have been removed!
+2026-03-09 21:14:05,650 - root - INFO - Data has been cleaned!
+2026-03-09 21:14:05,666 - root - INFO - Transformation completed
+2026-03-09 21:14:05,888 - root - INFO - Data loaded successfully
+2026-03-09 21:15:01,934 - root - INFO - Ingested 2823 rows
+2026-03-09 21:15:01,935 - root - INFO - Required columns have been renamed
+2026-03-09 21:15:01,939 - root - INFO - Invalid records have been tracked!
+2026-03-09 21:15:01,946 - root - INFO - Invalid records have been removed!
+2026-03-09 21:15:01,947 - root - INFO - Data has been cleaned!
+2026-03-09 21:15:01,955 - root - INFO - Transformation completed
+2026-03-09 21:15:02,091 - root - INFO - Data loaded successfully
+2026-03-09 21:40:51,542 - root - INFO - Ingested 2823 rows
+2026-03-09 21:40:51,549 - root - INFO - Required columns have been renamed
+2026-03-09 21:40:51,560 - root - INFO - Invalid records have been tracked!
+2026-03-09 21:40:51,574 - root - INFO - Invalid records have been removed!
+2026-03-09 21:40:51,574 - root - INFO - Data has been cleaned!
+2026-03-09 21:40:51,592 - root - INFO - Transformation completed
+2026-03-09 21:40:52,049 - root - INFO - Data loaded successfully
+2026-03-09 22:06:57,629 - root - INFO - Ingested 2823 rows
+2026-03-09 22:06:57,634 - root - INFO - Required columns have been renamed
+2026-03-09 22:06:57,640 - root - INFO - Invalid records have been tracked!
+2026-03-09 22:06:57,648 - root - INFO - Invalid records have been removed!
+2026-03-09 22:06:57,648 - root - INFO - Data has been cleaned!
+2026-03-09 22:06:57,658 - root - INFO - Transformation completed
+2026-03-09 22:06:57,962 - root - INFO - Data loaded successfully
+2026-03-09 22:11:58,666 - root - INFO - Ingested 2823 rows
+2026-03-09 22:11:58,668 - root - INFO - Required columns have been renamed
+2026-03-09 22:11:58,674 - root - INFO - Invalid records have been tracked!
+2026-03-09 22:11:58,684 - root - INFO - Invalid records have been removed!
+2026-03-09 22:11:58,685 - root - INFO - Data has been cleaned!
+2026-03-09 22:11:58,699 - root - INFO - Transformation completed
+2026-03-09 22:11:58,864 - root - INFO - Data loaded successfully

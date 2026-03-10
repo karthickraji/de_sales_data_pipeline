@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from scripts import transform
+from src import transform
 from config.db_config import *
 import logging
 

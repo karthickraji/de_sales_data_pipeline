@@ -1,5 +1,5 @@
 from config.logging_config import setup_logging
-from scripts import load
+from src import load
 
 setup_logging()
 
